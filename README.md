@@ -29,6 +29,7 @@ This project is a derivative work based on the excellent [TorchCode](https://git
 
 We sincerely thank the original author for creating such a well-designed practice platform. If you find this project helpful, please also give a ⭐ to the [original repository](https://github.com/duoan/TorchCode).
 
+
 ---
 
 ## 🎯 Why HappyTorch?
@@ -70,62 +71,33 @@ This project is **not** a shortcut to pass interviews, nor does it teach you "ho
 
 If you find this project useful, a Star ⭐ would be appreciated. Feel free to share it with others who are learning. Let's grow together!
 
+
 ---
 
-## 📦 Installation
-
-### Prerequisites
-
-- Python 3.10 or higher
-- Conda (recommended) or pip
-
-### Step 1: Create Conda Environment
+## 🚀 Quick Start
 
 ```bash
-# Create a new conda environment
-conda create -n happytorch python=3.11 -y
+# 1. Create and activate environment
+conda create -n torchcode python=3.11 -y
+conda activate torchcode
 
-# Activate the environment
-conda activate happytorch
-```
-
-### Step 2: Install Dependencies
-
-```bash
-# Install PyTorch (CPU version)
+# 2. Install dependencies
 pip install torch --index-url https://download.pytorch.org/whl/cpu
-
-# Install Jupyter and other dependencies
 pip install jupyterlab numpy
-```
-
-### Step 3: Install torch_judge Package
-
-```bash
-# Clone the repository
-git clone https://github.com/Rivflyyy/HappyTorch
-cd HappyTorch
-
-# Install the judge engine in development mode
 pip install -e .
-```
 
-### Step 4: Prepare Notebooks
-
-```bash
-# Create notebooks directory and copy templates/solutions
+# 3. Prepare notebooks
 python prepare_notebooks.py
+
+# 4a. Launch Web Mode (recommended for beginners)
+pip install fastapi uvicorn python-multipart
+python start_web.py
+# Open http://localhost:8000
+
+# 4b. Or launch Jupyter Mode (for more flexibility)
+python start_jupyter.py
+# Open http://localhost:8888
 ```
-
-> **Note for Windows users:** This script works on all platforms (Windows, macOS, Linux).
-
-### Step 5: Launch JupyterLab
-
-```bash
-jupyter lab --notebook-dir=notebooks --NotebookApp.token=''
-```
-
-Then open **http://localhost:8888** in your browser.
 
 ---
 
@@ -165,33 +137,6 @@ The web interface includes:
 - **Code Editor** — Write your implementation with syntax highlighting
 - **Description Panel** — View problem details and hints
 - **Results Panel** — See test results with pass/fail status and timing
-
----
-
-## 🚀 Quick Start
-
-```bash
-# 1. Create and activate environment
-conda create -n torchcode python=3.11 -y
-conda activate torchcode
-
-# 2. Install dependencies
-pip install torch --index-url https://download.pytorch.org/whl/cpu
-pip install jupyterlab numpy
-pip install -e .
-
-# 3. Prepare notebooks
-python prepare_notebooks.py
-
-# 4a. Launch Web Mode (recommended for beginners)
-pip install fastapi uvicorn python-multipart
-python start_web.py
-# Open http://localhost:8000
-
-# 4b. Or launch Jupyter Mode (for more flexibility)
-python start_jupyter.py
-# Open http://localhost:8888
-```
 
 ---
 
