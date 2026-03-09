@@ -8,3 +8,4 @@ data/*.db
 notebooks/
 .codebuddy
 CODEBUDDY.md
+web-plugin/
