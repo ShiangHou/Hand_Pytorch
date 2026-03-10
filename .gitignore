@@ -7,6 +7,6 @@ data/*.db
 .DS_Store
 notebooks/
 .codebuddy
-.CLAUDE.md
+CLAUDE.md
 CODEBUDDY.md
 web-plugin/
