@@ -1,6 +1,7 @@
 """Top-k sampling task."""
 
 TASK = {
+    "category": "ML 基础与解码策略",
     "title": "Top-k Sampling",
     "difficulty": "Medium",
     "function_name": "top_k_sample",

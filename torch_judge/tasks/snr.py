@@ -1,6 +1,7 @@
 """SNR (Sigmoid Noise Schedule) task — noise scheduling for diffusion models."""
 
 TASK = {
+    "category": "扩散模型训练",
     "title": "Sigmoid Noise Schedule",
     "difficulty": "Medium",
     "function_name": "sigmoid_schedule",

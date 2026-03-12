@@ -1,6 +1,7 @@
 """Greedy decoding task."""
 
 TASK = {
+    "category": "ML 基础与解码策略",
     "title": "Greedy Search Decoding",
     "difficulty": "Easy",
     "function_name": "greedy_decode",

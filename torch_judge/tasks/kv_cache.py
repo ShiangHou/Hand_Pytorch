@@ -1,6 +1,7 @@
 """KV Cache task — essential for efficient LLM inference."""
 
 TASK = {
+    "category": "LLM 推理组件",
     "title": "KV Cache for Attention",
     "difficulty": "Hard",
     "function_name": "KVCache",

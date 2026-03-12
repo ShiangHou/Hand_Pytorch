@@ -9,6 +9,20 @@ from typing import Any
 
 DIFFICULTY_ORDER = {"Easy": 0, "Medium": 1, "Hard": 2}
 
+CATEGORY_ORDER = [
+    "基础层",
+    "注意力机制",
+    "完整架构",
+    "现代激活函数",
+    "参数高效微调",
+    "条件调制 — Diffusion",
+    "LLM 推理组件",
+    "扩散模型训练",
+    "ML 基础与解码策略",
+    "RLHF",
+]
+_CATEGORY_INDEX = {c: i for i, c in enumerate(CATEGORY_ORDER)}
+
 TASKS: dict[str, dict[str, Any]] = {}
 
 _pkg_dir = str(Path(__file__).parent)
@@ -27,5 +41,8 @@ def get_task(task_id: str) -> dict[str, Any] | None:
 def list_tasks() -> list[tuple[str, dict[str, Any]]]:
     return sorted(
         TASKS.items(),
-        key=lambda t: DIFFICULTY_ORDER.get(t[1]["difficulty"], 9),
+        key=lambda t: (
+            _CATEGORY_INDEX.get(t[1].get("category", ""), 99),
+            DIFFICULTY_ORDER.get(t[1]["difficulty"], 9),
+        ),
     )

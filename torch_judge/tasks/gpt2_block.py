@@ -1,6 +1,7 @@
 """GPT-2 Transformer Block task."""
 
 TASK = {
+    "category": "完整架构",
     "title": "GPT-2 Transformer Block",
     "difficulty": "Hard",
     "function_name": "GPT2Block",

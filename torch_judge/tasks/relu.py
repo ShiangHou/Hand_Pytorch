@@ -1,6 +1,7 @@
 """ReLU implementation task."""
 
 TASK = {
+    "category": "基础层",
     "title": "Implement ReLU",
     "difficulty": "Easy",
     "function_name": "relu",

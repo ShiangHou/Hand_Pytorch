@@ -1,6 +1,7 @@
 """Hand-written backward pass for a two-layer MLP."""
 
 TASK = {
+    "category": "ML 基础与解码策略",
     "title": "Hand-Written Backward for a 2-Layer MLP",
     "difficulty": "Hard",
     "function_name": "mlp_backward",

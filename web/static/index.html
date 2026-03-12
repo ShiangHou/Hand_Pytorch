@@ -197,6 +197,59 @@
             padding: 8px;
         }
 
+        .category-group {
+            margin-bottom: 4px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 6px;
+            user-select: none;
+            transition: background 0.2s;
+        }
+
+        .category-header:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .category-header-left {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .category-header-left i {
+            font-size: 12px;
+            transition: transform 0.2s;
+        }
+
+        .category-group.collapsed .category-header-left i {
+            transform: rotate(-90deg);
+        }
+
+        .category-count {
+            font-size: 11px;
+            color: var(--text-muted);
+            background: var(--bg-tertiary);
+            padding: 1px 6px;
+            border-radius: 8px;
+        }
+
+        .category-tasks {
+            overflow: hidden;
+        }
+
+        .category-group.collapsed .category-tasks {
+            display: none;
+        }
+
         .task-item {
             padding: 12px;
             border-radius: 8px;
@@ -958,6 +1011,16 @@
         let currentTask = null;
         let editor = null;
         let progress = {};
+        const collapsedCategories = new Set();
+
+        function toggleCategory(category) {
+            if (collapsedCategories.has(category)) {
+                collapsedCategories.delete(category);
+            } else {
+                collapsedCategories.add(category);
+            }
+            renderTaskList();
+        }
 
         // API Base URL
         const API_BASE = window.location.origin;
@@ -1107,24 +1170,48 @@
                 return status === filter;
             });
 
-            container.innerHTML = filteredTasks.map(t => {
-                const p = progress[t.id] || {};
-                const status = p.status || 'todo';
-                const statusIcon = status === 'solved' ? '✅' : status === 'attempted' ? '🔧' : '⏳';
-                const statusClass = status;
+            // Group tasks by category (preserve API order)
+            const groups = new Map();
+            filteredTasks.forEach(t => {
+                const cat = t.category || '其他';
+                if (!groups.has(cat)) groups.set(cat, []);
+                groups.get(cat).push(t);
+            });
+
+            container.innerHTML = Array.from(groups.entries()).map(([category, categoryTasks]) => {
+                const collapsed = collapsedCategories.has(category) ? ' collapsed' : '';
+                const tasksHtml = categoryTasks.map(t => {
+                    const p = progress[t.id] || {};
+                    const status = p.status || 'todo';
+                    const statusIcon = status === 'solved' ? '✅' : status === 'attempted' ? '🔧' : '⏳';
+                    const statusClass = status;
+
+                    return `
+                        <div class="task-item ${currentTask?.id === t.id ? 'active' : ''}" onclick="loadTask('${t.id}')">
+                            <div class="task-item-header">
+                                <span class="task-id">${t.id}</span>
+                                <span class="task-difficulty ${t.difficulty}">${t.difficulty}</span>
+                            </div>
+                            <div class="task-title">${t.title}</div>
+                            <div class="task-status ${statusClass}">
+                                <span>${statusIcon}</span>
+                                <span>${p.attempts ? `${p.attempts} 次尝试` : '未开始'}</span>
+                                ${p.best_time ? `<span>· ${(p.best_time * 1000).toFixed(1)}ms</span>` : ''}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
 
                 return `
-                    <div class="task-item ${currentTask?.id === t.id ? 'active' : ''}" onclick="loadTask('${t.id}')">
-                        <div class="task-item-header">
-                            <span class="task-id">${t.id}</span>
-                            <span class="task-difficulty ${t.difficulty}">${t.difficulty}</span>
+                    <div class="category-group${collapsed}">
+                        <div class="category-header" onclick="toggleCategory('${category}')">
+                            <span class="category-header-left">
+                                <i class="ri-arrow-down-s-line"></i>
+                                ${category}
+                            </span>
+                            <span class="category-count">${categoryTasks.length}</span>
                         </div>
-                        <div class="task-title">${t.title}</div>
-                        <div class="task-status ${statusClass}">
-                            <span>${statusIcon}</span>
-                            <span>${p.attempts ? `${p.attempts} 次尝试` : '未开始'}</span>
-                            ${p.best_time ? `<span>· ${(p.best_time * 1000).toFixed(1)}ms</span>` : ''}
-                        </div>
+                        <div class="category-tasks">${tasksHtml}</div>
                     </div>
                 `;
             }).join('');

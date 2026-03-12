@@ -1,6 +1,7 @@
 """LayerNorm implementation task."""
 
 TASK = {
+    "category": "基础层",
     "title": "Implement LayerNorm",
     "difficulty": "Medium",
     "function_name": "my_layer_norm",

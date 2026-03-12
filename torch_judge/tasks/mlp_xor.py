@@ -1,6 +1,7 @@
 """Train a 2-layer MLP on XOR using only NumPy (manual forward + backward)."""
 
 TASK = {
+    "category": "ML 基础与解码策略",
     "title": "Train a 2-Layer MLP on XOR (Manual NumPy)",
     "difficulty": "Hard",
     "function_name": "mlp_xor",

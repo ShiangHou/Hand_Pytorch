@@ -1,6 +1,7 @@
 """DPO loss task."""
 
 TASK = {
+    "category": "RLHF",
     "title": "DPO Loss",
     "difficulty": "Hard",
     "function_name": "dpo_loss",

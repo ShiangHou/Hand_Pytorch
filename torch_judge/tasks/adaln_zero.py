@@ -1,6 +1,7 @@
 """AdaLN-Zero task — zero-initialized AdaLN for stable Diffusion Transformer training."""
 
 TASK = {
+    "category": "条件调制 — Diffusion",
     "title": "AdaLN-Zero",
     "difficulty": "Hard",
     "function_name": "AdaLNZero",

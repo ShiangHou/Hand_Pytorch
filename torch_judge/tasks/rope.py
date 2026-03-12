@@ -1,6 +1,7 @@
 """RoPE (Rotary Position Embedding) task — positional encoding used in LLaMA, Mistral, GPT-NeoX."""
 
 TASK = {
+    "category": "LLM 推理组件",
     "title": "Rotary Position Embedding (RoPE)",
     "difficulty": "Hard",
     "function_name": "apply_rotary_pos_emb",

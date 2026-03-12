@@ -1,6 +1,7 @@
 """SiLU (Swish) activation task — core component of SwiGLU, used in many modern architectures."""
 
 TASK = {
+    "category": "现代激活函数",
     "title": "SiLU (Swish) Activation",
     "difficulty": "Easy",
     "function_name": "silu",

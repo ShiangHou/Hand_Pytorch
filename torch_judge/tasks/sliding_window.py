@@ -1,6 +1,7 @@
 """Sliding Window Attention task."""
 
 TASK = {
+    "category": "注意力机制",
     "title": "Sliding Window Attention",
     "difficulty": "Hard",
     "function_name": "sliding_window_attention",

@@ -1,6 +1,7 @@
 """Softmax Attention task."""
 
 TASK = {
+    "category": "注意力机制",
     "title": "Softmax Attention",
     "difficulty": "Hard",
     "function_name": "scaled_dot_product_attention",

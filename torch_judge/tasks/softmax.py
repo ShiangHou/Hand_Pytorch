@@ -1,6 +1,7 @@
 """Softmax implementation task."""
 
 TASK = {
+    "category": "基础层",
     "title": "Implement Softmax",
     "difficulty": "Easy",
     "function_name": "my_softmax",

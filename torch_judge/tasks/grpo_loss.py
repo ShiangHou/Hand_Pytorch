@@ -1,6 +1,7 @@
 """GRPO loss task."""
 
 TASK = {
+    "category": "RLHF",
     "title": "GRPO Loss",
     "difficulty": "Hard",
     "function_name": "grpo_loss",

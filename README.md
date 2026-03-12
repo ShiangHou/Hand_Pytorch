@@ -15,6 +15,7 @@
 ![GPU](https://img.shields.io/badge/GPU-not%20required-brightgreen?style=flat-square)
 
 > **News**
+> - 2026-03-12: Web UI now groups problems by category (Fundamentals, Attention, RLHF, etc.) with collapsible sections in the sidebar for easier topic-based practice.
 > - 2026-03-10: Thanks to [SongHuang1](https://github.com/SongHuang1) for contributing the MLP XOR training problem (pure NumPy, manual forward + backward). Fixed Web UI issues: class-based tasks (LoRA, SwiGLU, etc.) now work correctly, added `nn`/`F`/`numpy`/`math` to execution namespace, fixed OpenMP crash on Windows, added MHA solution lookup, added 60s request timeout.
 > - 2026-03-09: Thanks to [chaoyitud](https://github.com/chaoyitud) for adding ML and RLHF practice problems. Thanks to [fiberproduct](https://github.com/fiberproduct) for fixing `torch_judge/tasks/rope.py`. Welcome everybody to contribute more problems!
 > - 2026-03-06: The plugin [happytorch-plugin](https://github.com/Rivflyyy/happytorch-plugin) has been released.

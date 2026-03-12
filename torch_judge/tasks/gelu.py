@@ -1,6 +1,7 @@
 """GELU (Gaussian Error Linear Unit) task — widely used in BERT, GPT, Diffusion models."""
 
 TASK = {
+    "category": "现代激活函数",
     "title": "GELU Activation",
     "difficulty": "Medium",
     "function_name": "gelu",

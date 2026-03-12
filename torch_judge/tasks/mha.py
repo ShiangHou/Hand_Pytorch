@@ -1,6 +1,7 @@
 """Multi-Head Attention task."""
 
 TASK = {
+    "category": "注意力机制",
     "title": "Multi-Head Attention",
     "difficulty": "Hard",
     "function_name": "MultiHeadAttention",

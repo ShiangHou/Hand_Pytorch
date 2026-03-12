@@ -1,6 +1,7 @@
 """BatchNorm implementation task."""
 
 TASK = {
+    "category": "基础层",
     "title": "Implement BatchNorm",
     "difficulty": "Medium",
     "function_name": "my_batch_norm",

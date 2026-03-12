@@ -1,6 +1,7 @@
 """SwiGLU activation task — used in LLaMA, PaLM and modern LLMs."""
 
 TASK = {
+    "category": "现代激活函数",
     "title": "SwiGLU Activation",
     "difficulty": "Hard",
     "function_name": "SwiGLU",

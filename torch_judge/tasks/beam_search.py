@@ -1,6 +1,7 @@
 """Beam search decoding task."""
 
 TASK = {
+    "category": "ML 基础与解码策略",
     "title": "Beam Search Decoding",
     "difficulty": "Hard",
     "function_name": "beam_search_decode",

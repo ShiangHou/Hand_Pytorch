@@ -1,6 +1,7 @@
 """Grouped Query Attention task."""
 
 TASK = {
+    "category": "注意力机制",
     "title": "Grouped Query Attention",
     "difficulty": "Hard",
     "function_name": "GroupQueryAttention",

@@ -1,6 +1,7 @@
 """LoRA (Low-Rank Adaptation) task — parameter-efficient fine-tuning."""
 
 TASK = {
+    "category": "参数高效微调",
     "title": "LoRA Linear Layer",
     "difficulty": "Hard",
     "function_name": "LoRALinear",

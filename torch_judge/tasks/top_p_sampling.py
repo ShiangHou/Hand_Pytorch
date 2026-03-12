@@ -1,6 +1,7 @@
 """Top-p (nucleus) sampling task."""
 
 TASK = {
+    "category": "ML 基础与解码策略",
     "title": "Top-p Sampling",
     "difficulty": "Hard",
     "function_name": "top_p_sample",

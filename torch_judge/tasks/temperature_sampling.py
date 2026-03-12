@@ -1,6 +1,7 @@
 """Temperature sampling task."""
 
 TASK = {
+    "category": "ML 基础与解码策略",
     "title": "Temperature Sampling",
     "difficulty": "Medium",
     "function_name": "temperature_sample",

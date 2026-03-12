@@ -1,6 +1,7 @@
 """Causal Self-Attention task."""
 
 TASK = {
+    "category": "注意力机制",
     "title": "Causal Self-Attention",
     "difficulty": "Hard",
     "function_name": "causal_attention",

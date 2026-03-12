@@ -1,6 +1,7 @@
 """Linear Self-Attention task."""
 
 TASK = {
+    "category": "注意力机制",
     "title": "Linear Self-Attention",
     "difficulty": "Hard",
     "function_name": "linear_attention",

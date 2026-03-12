@@ -1,6 +1,7 @@
 """RMSNorm implementation task."""
 
 TASK = {
+    "category": "基础层",
     "title": "Implement RMSNorm",
     "difficulty": "Medium",
     "function_name": "rms_norm",

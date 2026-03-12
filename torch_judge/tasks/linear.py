@@ -1,6 +1,7 @@
 """Simple Linear Layer task."""
 
 TASK = {
+    "category": "基础层",
     "title": "Simple Linear Layer",
     "difficulty": "Medium",
     "function_name": "SimpleLinear",

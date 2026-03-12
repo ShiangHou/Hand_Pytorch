@@ -1,6 +1,7 @@
 """K-Means clustering task."""
 
 TASK = {
+    "category": "ML 基础与解码策略",
     "title": "K-Means Clustering",
     "difficulty": "Medium",
     "function_name": "kmeans",

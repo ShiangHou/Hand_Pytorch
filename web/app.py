@@ -427,6 +427,7 @@ async def get_tasks():
             "title": task["title"],
             "difficulty": task["difficulty"],
             "function_name": task["function_name"],
+            "category": task.get("category", ""),
         })
     return {"tasks": tasks}
 

@@ -1,6 +1,7 @@
 """FiLM (Feature-wise Linear Modulation) task — conditional feature modulation."""
 
 TASK = {
+    "category": "条件调制 — Diffusion",
     "title": "FiLM Layer",
     "difficulty": "Medium",
     "function_name": "FiLM",

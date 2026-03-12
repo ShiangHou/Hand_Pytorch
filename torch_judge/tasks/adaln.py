@@ -1,6 +1,7 @@
 """AdaLN (Adaptive Layer Normalization) task — used in DiT, Diffusion Transformers."""
 
 TASK = {
+    "category": "条件调制 — Diffusion",
     "title": "AdaLN (Adaptive Layer Normalization)",
     "difficulty": "Hard",
     "function_name": "AdaLN",

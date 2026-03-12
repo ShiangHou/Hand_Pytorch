@@ -1,6 +1,7 @@
 """PPO clipped policy loss task."""
 
 TASK = {
+    "category": "RLHF",
     "title": "PPO Clipped Policy Loss",
     "difficulty": "Hard",
     "function_name": "ppo_clipped_loss",

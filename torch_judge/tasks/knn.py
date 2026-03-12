@@ -1,6 +1,7 @@
 """K-Nearest Neighbors classification task."""
 
 TASK = {
+    "category": "ML 基础与解码策略",
     "title": "K-Nearest Neighbors Classification",
     "difficulty": "Easy",
     "function_name": "knn_predict",

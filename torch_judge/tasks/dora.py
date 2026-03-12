@@ -1,6 +1,7 @@
 """DoRA (Weight-Decomposed Low-Rank Adaptation) task — improved LoRA variant."""
 
 TASK = {
+    "category": "参数高效微调",
     "title": "DoRA Linear Layer",
     "difficulty": "Hard",
     "function_name": "DoRALinear",
