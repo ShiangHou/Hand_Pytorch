@@ -4,5 +4,17 @@
     "solved_at": "2026-03-23T17:07:21.249510",
     "best_time": 0.095605791779235,
     "attempts": 1
+  },
+  "softmax": {
+    "status": "solved",
+    "attempts": 4,
+    "solved_at": "2026-03-23T18:30:49.655429",
+    "best_time": 0.0025751253124326468
+  },
+  "linear": {
+    "status": "solved",
+    "solved_at": "2026-03-23T18:56:12.859780",
+    "best_time": 0.031307082856073976,
+    "attempts": 1
   }
 }
