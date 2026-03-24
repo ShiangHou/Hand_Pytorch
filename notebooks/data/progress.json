@@ -16,5 +16,11 @@
     "solved_at": "2026-03-23T18:56:12.859780",
     "best_time": 0.031307082856073976,
     "attempts": 1
+  },
+  "layernorm": {
+    "status": "solved",
+    "solved_at": "2026-03-24T20:27:16.692550",
+    "best_time": 0.03344424883835018,
+    "attempts": 1
   }
 }
