@@ -22,5 +22,17 @@
     "solved_at": "2026-03-24T20:27:16.692550",
     "best_time": 0.03344424883835018,
     "attempts": 1
+  },
+  "attention": {
+    "status": "solved",
+    "attempts": 2,
+    "solved_at": "2026-03-25T10:03:43.539847",
+    "best_time": 0.004904917208477855
+  },
+  "mha": {
+    "status": "solved",
+    "attempts": 3,
+    "solved_at": "2026-03-31T17:31:38.674604",
+    "best_time": 0.006608583033084869
   }
 }
